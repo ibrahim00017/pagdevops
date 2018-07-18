@@ -1,0 +1,7 @@
+.idea
+bootcamp.*
+*.fonctionnel
+*.case
+*-service
+*.services
+parent.iml
