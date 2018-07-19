@@ -4,7 +4,7 @@ services:
         build: categorie.service.fonctionnel
         mem_limit: 1024M
         ports:
-            - "8082:8082"
+            - "6082:6082"
         networks:
         - pag-net
         volumes :
@@ -113,7 +113,7 @@ services:
         build: sondage.service.fonctionnel
         mem_limit: 1024M
         ports:
-        - "8087:8087"
+        - "7087:7087"
         networks:
         - pag-net
         volumes :
@@ -122,7 +122,7 @@ services:
         build: statistique.service.fonctionnel
         mem_limit: 1024M
         ports:
-        - "9093:9093"
+        - "6093:6093"
         networks:
         - pag-net
         volumes :
@@ -131,7 +131,7 @@ services:
         build: bootcamp.user
         mem_limit: 1024M
         ports:
-        - "8087:8087"
+        - "6087:6087"
         networks:
         - pag-net
         volumes :
