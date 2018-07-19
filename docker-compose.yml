@@ -1,8 +1,8 @@
-version: '2'
+version: '3'
 services:
     categorie:
         build: categorie.service.fonctionnel
-        mem_limit: 1024M
+#        mem_limit: 1024M
         ports:
             - "6082:6082"
         networks:
@@ -138,7 +138,7 @@ services:
 #        - /home/devops/pag/release_2.0/scripts/home:/home
     gateway:
         build: eureka-service
-        mem_limit: 1024M
+#        mem_limit: 1024M
         ports:
             - "8761:8761"
         networks:
