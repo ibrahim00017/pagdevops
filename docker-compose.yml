@@ -144,21 +144,21 @@ services:
         networks:
         - pag-net
         links:
-#            - user:statistique.service.fonctionnel
-#            - stats:statistique.service.fonctionnel
-#            - sondage:sondage.service.fonctionnel
-#            - programme:programme.service.fonctionnel
-#            - preference:preference.service.fonctionnel
-#            - notification:notification.generator.services
-#            - note:note.service.fonctionnel
-#            - media:media.service.fonctionnel
-#            - like:liketable.service.fonctionnel
-#            - debatuc:debat.service.use.case
-#            - debat:debat.service.fonctionnel
-#            - censure:censure.service.fonctionnel
-#            - commentaire:commentaire.service.fonctionnel
-#            - projet:projet.service.fonctionnel
-#            - categorie:categorie.service.fonctionnel
+            - user:statistique.service.fonctionnel
+            - stats:statistique.service.fonctionnel
+            - sondage:sondage.service.fonctionnel
+            - programme:programme.service.fonctionnel
+            - preference:preference.service.fonctionnel
+            - notification:notification.generator.services
+            - note:note.service.fonctionnel
+            - media:media.service.fonctionnel
+            - like:liketable.service.fonctionnel
+            - debatuc:debat.service.use.case
+            - debat:debat.service.fonctionnel
+            - censure:censure.service.fonctionnel
+            - commentaire:commentaire.service.fonctionnel
+            - projet:projet.service.fonctionnel
+            - categorie:categorie.service.fonctionnel
         depends_on:
             - user
             - stats
