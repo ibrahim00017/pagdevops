@@ -1,8 +1,8 @@
-version: '3'
+version: '2'
 services:
     categorie:
         build: categorie.service.fonctionnel
-#        mem_limit: 1024M
+        mem_limit: 1024M
         ports:
             - "8082:8082"
         networks:
@@ -12,7 +12,7 @@ services:
 
     projet:
         build: projet.service.fonctionnel
-#        mem_limit: 1024M
+        mem_limit: 1024M
         ports:
             - "8081:8081"
         networks:
@@ -21,7 +21,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     commentaire:
         build: commentaire.service.fonctionnel
-#        mem_limit: 512M
+        mem_limit: 1024M
         ports:
             - "8083:8083"
         networks:
@@ -30,7 +30,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     censure:
         build: censure.service.fonctionnel
-        #        mem_limit: 1024M
+        mem_limit: 1024M
         ports:
         - "8089:8089"
         networks:
@@ -39,7 +39,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     debat:
         build: debat.service.fonctionnel
-        #        mem_limit: 512M
+        mem_limit: 1024M
         ports:
         - "8088:8088"
         networks:
@@ -48,7 +48,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     debatuc:
         build: debat.service.use.case
-        #        mem_limit: 512M
+        mem_limit: 1024M
         ports:
         - "8095:8095"
         networks:
@@ -57,7 +57,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     like:
         build: liketable.service.fonctionnel
-        #        mem_limit: 512M
+        mem_limit: 1024M
         ports:
         - "8085:8085"
         networks:
@@ -66,7 +66,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     media:
         build: media.service.fonctionnel
-        #        mem_limit: 1024M
+        mem_limit: 1024M
         ports:
         - "8086:8086"
         networks:
@@ -75,7 +75,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     note:
         build: note.service.fonctionnel
-        #        mem_limit: 512M
+        mem_limit: 1024M
         ports:
         - "8084:8084"
         networks:
@@ -84,7 +84,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     notification:
         build: notification.generator.services
-        #        mem_limit: 512M
+        mem_limit: 1024M
         ports:
         - "8092:8092"
         networks:
@@ -93,7 +93,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     preference:
         build: preference.service.fonctionnel
-        #        mem_limit: 1024M
+        mem_limit: 1024M
         ports:
         - "8090:8090"
         networks:
@@ -102,7 +102,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     programme:
         build: programme.service.fonctionnel
-        #        mem_limit: 512M
+        mem_limit: 1024M
         ports:
         - "8091:8091"
         networks:
@@ -111,7 +111,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     sondage:
         build: sondage.service.fonctionnel
-        #        mem_limit: 512M
+        mem_limit: 1024M
         ports:
         - "8087:8087"
         networks:
@@ -120,7 +120,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     stats:
         build: statistique.service.fonctionnel
-        #        mem_limit: 512M
+        mem_limit: 1024M
         ports:
         - "9093:9093"
         networks:
@@ -129,7 +129,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     user:
         build: bootcamp.user
-        #        mem_limit: 512M
+        mem_limit: 1024M
         ports:
         - "8087:8087"
         networks:
@@ -138,7 +138,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     gateway:
         build: eureka-service
-#        mem_limit: 512M
+        mem_limit: 1024M
         ports:
             - "8761:8761"
         networks:
