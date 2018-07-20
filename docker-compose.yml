@@ -7,7 +7,6 @@ services:
             - "6082:6082"
         networks:
         - pag-net
-        - esnet
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
 
@@ -18,7 +17,6 @@ services:
             - "8081:8081"
         networks:
         - pag-net
-        - esnet
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     commentaire:
@@ -28,7 +26,6 @@ services:
             - "8083:8083"
         networks:
         - pag-net
-        - esnet
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     censure:
@@ -38,7 +35,6 @@ services:
         - "8089:8089"
         networks:
         - pag-net
-        - esnet
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     debat:
@@ -48,7 +44,6 @@ services:
         - "8088:8088"
         networks:
         - pag-net
-        - esnet
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     debatuc:
@@ -58,7 +53,6 @@ services:
         - "8095:8095"
         networks:
         - pag-net
-        - esnet
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     like:
@@ -68,7 +62,6 @@ services:
         - "8085:8085"
         networks:
         - pag-net
-        - esnet
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     media:
@@ -78,7 +71,6 @@ services:
         - "8086:8086"
         networks:
         - pag-net
-        - esnet
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     note:
@@ -88,7 +80,6 @@ services:
         - "8084:8084"
         networks:
         - pag-net
-        - esnet
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     notification:
@@ -98,7 +89,6 @@ services:
         - "8092:8092"
         networks:
         - pag-net
-        - esnet
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     preference:
@@ -108,7 +98,6 @@ services:
         - "8090:8090"
         networks:
         - pag-net
-        - esnet
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     programme:
@@ -118,7 +107,6 @@ services:
         - "8091:8091"
         networks:
         - pag-net
-        - esnet
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     sondage:
@@ -128,7 +116,6 @@ services:
         - "7087:7087"
         networks:
         - pag-net
-        - esnet
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     stats:
@@ -138,7 +125,6 @@ services:
         - "6093:6093"
         networks:
         - pag-net
-        - esnet
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     user:
@@ -148,9 +134,25 @@ services:
         - "6087:6087"
         networks:
         - pag-net
-        - esnet
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
+    elastic:
+        image: docker.elastic.co/elasticsearch/elasticsearch:6.3.1
+        container_name: elastic
+        environment:
+        - cluster.name=docker-cluster
+        - bootstrap.memory_lock=true
+        - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+        ulimits:
+            memlock:
+                soft: -1
+                hard: -1
+        volumes:
+        - esdata1:/usr/share/elasticsearch/data
+        ports:
+        - 9200:9200
+        networks:
+        - pag-net
     gateway:
         build: eureka-service
 #        mem_limit: 1024M
@@ -158,7 +160,6 @@ services:
             - "8761:8761"
         networks:
         - pag-net
-        - esnet
 #        links:
 #            - user:statistique.service.fonctionnel
 #            - stats:statistique.service.fonctionnel
@@ -194,5 +195,6 @@ services:
 networks:
     pag-net:
         external: true
-    esnet:
-        external: true
+volumes:
+    esdata1:
+        driver: local
