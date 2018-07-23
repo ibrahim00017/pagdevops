@@ -150,7 +150,7 @@ services:
         volumes:
         - esdata1:/usr/share/elasticsearch/data
         ports:
-        - 9200:9200
+        - 9201:9200
         networks:
         - pag-net
     gateway:
