@@ -136,23 +136,23 @@ services:
         - pag-net
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
-    elastic:
-        image: docker.elastic.co/elasticsearch/elasticsearch:6.3.1
-        container_name: elastic
-        environment:
-        - cluster.name=docker-cluster
-        - bootstrap.memory_lock=true
-        - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-        ulimits:
-            memlock:
-                soft: -1
-                hard: -1
-        volumes:
-        - esdata1:/usr/share/elasticsearch/data
-        ports:
-        - 9201:9200
-        networks:
-        - pag-net
+#    elastic:
+#        image: docker.elastic.co/elasticsearch/elasticsearch:6.3.1
+#        container_name: elastic
+#        environment:
+#        - cluster.name=docker-cluster
+#        - bootstrap.memory_lock=true
+#        - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+#        ulimits:
+#            memlock:
+#                soft: -1
+#                hard: -1
+#        volumes:
+#        - esdata1:/usr/share/elasticsearch/data
+#        ports:
+#        - 9201:9200
+#        networks:
+#        - pag-net
     gateway:
         build: eureka-service
 #        mem_limit: 1024M
