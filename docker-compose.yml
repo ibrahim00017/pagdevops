@@ -153,13 +153,13 @@ services:
 #        - 9201:9200
 #        networks:
 #        - pag-net
-    gateway:
-        build: eureka-service
-#        mem_limit: 1024M
-        ports:
-            - "8761:8761"
-        networks:
-        - pag-net
+#    gateway:
+#        build: eureka-service
+##        mem_limit: 1024M
+#        ports:
+#            - "8761:8761"
+#        networks:
+#        - pag-net
 #        links:
 #            - user:statistique.service.fonctionnel
 #            - stats:statistique.service.fonctionnel
@@ -176,22 +176,22 @@ services:
 #            - commentaire:commentaire.service.fonctionnel
 #            - projet:projet.service.fonctionnel
 #            - categorie:categorie.service.fonctionnel
-        depends_on:
-            - user
-            - stats
-            - sondage
-            - programme
-            - preference
-            - notification
-            - note
-            - media
-            - like
-            - debatuc
-            - debat
-            - censure
-            - commentaire
-            - projet
-            - categorie
+#        depends_on:
+#            - user
+#            - stats
+#            - sondage
+#            - programme
+#            - preference
+#            - notification
+#            - note
+#            - media
+#            - like
+#            - debatuc
+#            - debat
+#            - censure
+#            - commentaire
+#            - projet
+#            - categorie
 networks:
     pag-net:
         external: true
