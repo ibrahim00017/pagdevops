@@ -17,7 +17,7 @@ for projet_war in ${projets_wars[@]}
    do
 	if [ -d "$repository_dir" ]
 	then
-	      cd "$projet_war"
+	      d "$repository_dir/$projet_war"
 	      rm -rf src/main/resources/local/
 	      rm -rf src/main/resources/dev/
        	  rm -rf src/test/resources/local/
