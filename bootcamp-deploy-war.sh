@@ -26,5 +26,5 @@ for projet_war in ${projets_wars[@]}
 	      # mvn clean install -P test -DskipTests
 	      #nohup mvn spring-boot:run -P dev  -DskipTests > log.out &
 	      mvn spring-boot:run -P test  -DskipTests > log.out 
-	fi
+	
 done
