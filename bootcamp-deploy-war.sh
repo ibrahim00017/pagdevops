@@ -24,7 +24,7 @@ for projet_war in ${projets_wars[@]}
 	      rm -rf src/test/resources/dev/
 	      rm -rf target/ log*
 	      mvn clean install -P test -DskipTests
-	      nohup mvn spring-boot:run -P dev  -DskipTests > log.out &
+	      nohup mvn spring-boot:run -P test  -DskipTests > log.out &
 	      mvn spring-boot:run -P test  -DskipTests > log.out 
 	
 done
