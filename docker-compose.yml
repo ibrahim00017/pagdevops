@@ -6,8 +6,8 @@ services:
         ports:
             - "6082:6082"
         network_mode: "host"
-        networks:
-        - pag-net
+#        networks:
+#        - pag-net
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
 
@@ -17,8 +17,8 @@ services:
         ports:
             - "8081:8081"
         network_mode: "host"
-        networks:
-        - pag-net
+#        networks:
+#        - pag-net
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     commentaire:
@@ -27,8 +27,8 @@ services:
         ports:
             - "8083:8083"
         network_mode: "host"
-        networks:
-        - pag-net
+#        networks:
+#        - pag-net
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     censure:
@@ -37,8 +37,8 @@ services:
         ports:
         - "8089:8089"
         network_mode: "host"
-        networks:
-        - pag-net
+#        networks:
+#        - pag-net
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     debat:
@@ -47,8 +47,8 @@ services:
         network_mode: "host"
         ports:
         - "8088:8088"
-        networks:
-        - pag-net
+#        networks:
+#        - pag-net
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     debatuc:
@@ -57,8 +57,8 @@ services:
         ports:
         - "8095:8095"
         network_mode: "host"
-        networks:
-        - pag-net
+#        networks:
+#        - pag-net
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     like:
@@ -67,9 +67,9 @@ services:
         ports:
         - "8085:8085"
         network_mode: "host"
-        networks:
-        - pag-net
-        - host
+#        networks:
+#        - pag-net
+#        - host
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     media:
@@ -78,8 +78,8 @@ services:
         ports:
         - "8086:8086"
         network_mode: "host"
-        networks:
-        - pag-net
+#        networks:
+#        - pag-net
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     note:
@@ -88,8 +88,8 @@ services:
         ports:
         - "8084:8084"
         network_mode: "host"
-        networks:
-        - pag-net
+#        networks:
+#        - pag-net
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     notification:
@@ -98,8 +98,8 @@ services:
         ports:
         - "8092:8092"
         network_mode: "host"
-        networks:
-        - pag-net
+#        networks:
+#        - pag-net
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     preference:
@@ -108,8 +108,8 @@ services:
         ports:
         - "8090:8090"
         network_mode: "host"
-        networks:
-        - pag-net
+#        networks:
+#        - pag-net
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     programme:
@@ -118,8 +118,8 @@ services:
         ports:
         - "8091:8091"
         network_mode: "host"
-        networks:
-        - pag-net
+#        networks:
+#        - pag-net
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     sondage:
@@ -128,8 +128,8 @@ services:
         ports:
         - "7087:7087"
         network_mode: "host"
-        networks:
-        - pag-net
+#        networks:
+#        - pag-net
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     stats:
@@ -138,8 +138,8 @@ services:
         ports:
         - "6093:6093"
         network_mode: "host"
-        networks:
-        - pag-net
+#        networks:
+#        - pag-net
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     user:
@@ -148,8 +148,8 @@ services:
         ports:
         - "6087:6087"
         network_mode: "host"
-        networks:
-        - pag-net
+#        networks:
+#        - pag-net
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
 #    elastic:
@@ -208,9 +208,9 @@ services:
 #            - commentaire
 #            - projet
 #            - categorie
-networks:
-    pag-net:
-        external: true
-volumes:
-    esdata1:
-        driver: local
+#networks:
+#    pag-net:
+#        external: true
+#volumes:
+#    esdata1:
+#        driver: local
