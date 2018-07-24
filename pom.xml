@@ -24,7 +24,7 @@
         <module>statistique.service.fonctionnel</module>
         <module>debat.service.use.case</module>
         <module>bootcamp.user</module>
-        <module>eureka-service</module>
+        <!--<module>eureka-service</module>-->
     </modules>
     <profiles>
         <profile>
