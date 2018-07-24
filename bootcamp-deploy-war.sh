@@ -17,14 +17,14 @@ for projet_war in ${projets_wars[@]}
    do
 	# if [ -d "$repository_dir" ]
 	# then
-	      # cd "$projet_war"
-	      # rm -rf src/main/resources/local/
-	      # rm -rf src/main/resources/dev/
-       # 	  rm -rf src/test/resources/local/
-	      # rm -rf src/test/resources/dev/
-	      # rm -rf target/ log*
-	      # mvn clean install -P test -DskipTests
-	      #nohup mvn spring-boot:run -P dev  -DskipTests > log.out &
+	      cd "$projet_war"
+	      rm -rf src/main/resources/local/
+	      rm -rf src/main/resources/dev/
+       	  rm -rf src/test/resources/local/
+	      rm -rf src/test/resources/dev/
+	      rm -rf target/ log*
+	      mvn clean install -P test -DskipTests
+	      nohup mvn spring-boot:run -P dev  -DskipTests > log.out &
 	      mvn spring-boot:run -P test  -DskipTests > log.out 
 	
 done
