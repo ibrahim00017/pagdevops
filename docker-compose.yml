@@ -6,8 +6,8 @@ services:
         ports:
             - "6082:6082"
         network_mode: "host"
-#        networks:
-#        - pag-net
+        networks:
+        - pag-net
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
 
@@ -80,8 +80,9 @@ services:
         network_mode: "host"
 #        networks:
 #        - pag-net
+#        - pag-net
         volumes :
-        - /home/devops/pag/release_2.0/scripts/home:/home
+        - /home/media/location:/home/media/location
     note:
         build: note.service.fonctionnel
         mem_limit: 1024M
@@ -211,6 +212,3 @@ services:
 #networks:
 #    pag-net:
 #        external: true
-#volumes:
-#    esdata1:
-#        driver: local
