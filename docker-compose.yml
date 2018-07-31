@@ -2,7 +2,7 @@ version: '2'
 services:
     categorie:
         build: categorie.service.fonctionnel
-        mem_limit: 1024M
+        mem_limit: 1000M
         restart: on-failure
         ports:
             - "6082:6082"
@@ -14,7 +14,7 @@ services:
 
     projet:
         build: projet.service.fonctionnel
-        mem_limit: 1024M
+        mem_limit: 1000M
         restart: on-failure
         ports:
             - "8081:8081"
@@ -25,7 +25,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     projetuc:
         build: projet.service.fonctionnel
-        mem_limit: 1024M
+        mem_limit: 1000M
         restart: on-failure
         ports:
         - "9091:9091"
@@ -36,7 +36,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     commentaire:
         build: commentaire.service.fonctionnel
-        mem_limit: 1024M
+        mem_limit: 1000M
         restart: on-failure
         ports:
             - "8083:8083"
@@ -47,7 +47,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     censure:
         build: censure.service.fonctionnel
-        mem_limit: 1024M
+        mem_limit: 1000M
         restart: on-failure
         ports:
         - "8089:8089"
@@ -58,7 +58,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     debat:
         build: debat.service.fonctionnel
-        mem_limit: 1024M
+        mem_limit: 1000M
         restart: on-failure
         network_mode: "host"
         ports:
@@ -69,7 +69,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     debatuc:
         build: debat.service.use.case
-        mem_limit: 1024M
+        mem_limit: 1000M
         restart: on-failure
         ports:
         - "8095:8095"
@@ -80,7 +80,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     like:
         build: liketable.service.fonctionnel
-        mem_limit: 1024M
+        mem_limit: 1000M
         restart: on-failure
         ports:
         - "8085:8085"
@@ -92,7 +92,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     media:
         build: media.service.fonctionnel
-        mem_limit: 1024M
+        mem_limit: 1000M
         restart: on-failure
         ports:
         - "8086:8086"
@@ -104,7 +104,7 @@ services:
         - /home/media/location:/home/media/location
     note:
         build: note.service.fonctionnel
-        mem_limit: 1024M
+        mem_limit: 1000M
         restart: on-failure
         ports:
         - "8084:8084"
@@ -115,7 +115,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     notification:
         build: notification.generator.services
-        mem_limit: 1024M
+        mem_limit: 1000M
         restart: on-failure
         ports:
         - "8092:8092"
@@ -126,7 +126,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     preference:
         build: preference.service.fonctionnel
-        mem_limit: 1024M
+        mem_limit: 1000M
         restart: on-failure
         ports:
         - "8090:8090"
@@ -137,7 +137,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     programme:
         build: programme.service.fonctionnel
-        mem_limit: 1024M
+        mem_limit: 1000M
         restart: on-failure
         ports:
         - "8091:8091"
@@ -148,7 +148,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     sondage:
         build: sondage.service.fonctionnel
-        mem_limit: 1024M
+        mem_limit: 1000M
         restart: on-failure
         ports:
         - "7087:7087"
@@ -159,7 +159,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     stats:
         build: statistique.service.fonctionnel
-        mem_limit: 1024M
+        mem_limit: 1000M
         restart: on-failure
         ports:
         - "6093:6093"
@@ -170,7 +170,7 @@ services:
         - /home/devops/pag/release_2.0/scripts/home:/home
     user:
         build: bootcamp.user
-        mem_limit: 1024M
+        mem_limit: 1000M
         restart: on-failure
         ports:
         - "6087:6087"
