@@ -24,7 +24,7 @@ services:
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
     projetuc:
-        build: projet.service.fonctionnel
+        build: projet.service.use.case
         mem_limit: 1024M
         restart: on-failure
         ports:
