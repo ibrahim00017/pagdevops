@@ -9,7 +9,7 @@ password=$4
 
 #Un tableau contenant le nom de tous les projets 
 
-projets=("categorie.service.fonctionnel" "projet.service.fonctionnel" "commentaire.service.fonctionnel" "media.service.fonctionnel" "liketable.service.fonctionnel" "note.service.fonctionnel" "debat.service.fonctionnel" "censure.service.fonctionnel" "sondage.service.fonctionnel" "notification.generator.services" "notification.diffusion.services" "preference.service.fonctionnel" "programme.service.fonctionnel" "debat.service.use.case" "bootcamp.user" "statistique.service.fonctionnel")
+projets=("categorie.service.fonctionnel" "projet.service.fonctionnel" "commentaire.service.fonctionnel" "media.service.fonctionnel" "liketable.service.fonctionnel" "note.service.fonctionnel" "debat.service.fonctionnel" "censure.service.fonctionnel" "sondage.service.fonctionnel" "notification.generator.services" "notification.diffusion.services" "preference.service.fonctionnel" "programme.service.fonctionnel" "debat.service.use.case" "bootcamp.user" "statistique.service.fonctionnel" "projet.service.use.case")
 
 #On verifie si le repertoire dans lequel sera cloner tous les projets existe
 #Et On supprime le repertoire si elle existe
