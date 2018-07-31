@@ -1,21 +1,21 @@
 version: '3'
 services:
     categorie:
-        build: categorie.service.fonctionnel
+        image: sfcategorie
         deploy:
             replicas: 3
             resources:
                 limits:
                     cpus: "0.1"
-                    memory: 50M
+                    memory: 512M
             restart_policy:
                 condition: on-failure
 #        mem_limit: 1024M
         ports:
             - "6082:6082"
         network_mode: "host"
-        networks:
-        - pag-net
+#        networks:
+#        - pag-net
         volumes :
         - /home/devops/pag/release_2.0/scripts/home:/home
 
