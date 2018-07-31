@@ -3,8 +3,7 @@ services:
     categorie:
         build: categorie.service.fonctionnel
         mem_limit: 1024M
-        restart_policy:
-            condition: on-failure
+        restart: on-failure
         ports:
             - "6082:6082"
         network_mode: "host"
@@ -16,8 +15,7 @@ services:
     projet:
         build: projet.service.fonctionnel
         mem_limit: 1024M
-        restart_policy:
-            condition: on-failure
+        restart: on-failure
         ports:
             - "8081:8081"
         network_mode: "host"
@@ -28,8 +26,7 @@ services:
     projetuc:
         build: projet.service.fonctionnel
         mem_limit: 1024M
-        restart_policy:
-            condition: on-failure
+        restart: on-failure
         ports:
         - "9091:9091"
         network_mode: "host"
@@ -40,8 +37,7 @@ services:
     commentaire:
         build: commentaire.service.fonctionnel
         mem_limit: 1024M
-        restart_policy:
-            condition: on-failure
+        restart: on-failure
         ports:
             - "8083:8083"
         network_mode: "host"
@@ -52,8 +48,7 @@ services:
     censure:
         build: censure.service.fonctionnel
         mem_limit: 1024M
-        restart_policy:
-            condition: on-failure
+        restart: on-failure
         ports:
         - "8089:8089"
         network_mode: "host"
@@ -64,8 +59,7 @@ services:
     debat:
         build: debat.service.fonctionnel
         mem_limit: 1024M
-        restart_policy:
-            condition: on-failure
+        restart: on-failure
         network_mode: "host"
         ports:
         - "8088:8088"
@@ -76,8 +70,7 @@ services:
     debatuc:
         build: debat.service.use.case
         mem_limit: 1024M
-        restart_policy:
-            condition: on-failure
+        restart: on-failure
         ports:
         - "8095:8095"
         network_mode: "host"
@@ -88,8 +81,7 @@ services:
     like:
         build: liketable.service.fonctionnel
         mem_limit: 1024M
-        restart_policy:
-            condition: on-failure
+        restart: on-failure
         ports:
         - "8085:8085"
         network_mode: "host"
@@ -101,8 +93,7 @@ services:
     media:
         build: media.service.fonctionnel
         mem_limit: 1024M
-        restart_policy:
-            condition: on-failure
+        restart: on-failure
         ports:
         - "8086:8086"
         network_mode: "host"
@@ -114,8 +105,7 @@ services:
     note:
         build: note.service.fonctionnel
         mem_limit: 1024M
-        restart_policy:
-            condition: on-failure
+        restart: on-failure
         ports:
         - "8084:8084"
         network_mode: "host"
@@ -126,8 +116,7 @@ services:
     notification:
         build: notification.generator.services
         mem_limit: 1024M
-        restart_policy:
-            condition: on-failure
+        restart: on-failure
         ports:
         - "8092:8092"
         network_mode: "host"
@@ -138,8 +127,7 @@ services:
     preference:
         build: preference.service.fonctionnel
         mem_limit: 1024M
-        restart_policy:
-            condition: on-failure
+        restart: on-failure
         ports:
         - "8090:8090"
         network_mode: "host"
@@ -150,8 +138,7 @@ services:
     programme:
         build: programme.service.fonctionnel
         mem_limit: 1024M
-        restart_policy:
-            condition: on-failure
+        restart: on-failure
         ports:
         - "8091:8091"
         network_mode: "host"
@@ -162,8 +149,7 @@ services:
     sondage:
         build: sondage.service.fonctionnel
         mem_limit: 1024M
-        restart_policy:
-            condition: on-failure
+        restart: on-failure
         ports:
         - "7087:7087"
         network_mode: "host"
@@ -174,8 +160,7 @@ services:
     stats:
         build: statistique.service.fonctionnel
         mem_limit: 1024M
-        restart_policy:
-            condition: on-failure
+        restart: on-failure
         ports:
         - "6093:6093"
         network_mode: "host"
@@ -186,8 +171,7 @@ services:
     user:
         build: bootcamp.user
         mem_limit: 1024M
-        restart_policy:
-            condition: on-failure
+        restart: on-failure
         ports:
         - "6087:6087"
         network_mode: "host"
